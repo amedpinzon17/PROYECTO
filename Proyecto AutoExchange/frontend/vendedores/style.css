@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(90deg, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 43%, rgba(0,0,0,0.77) 100%);
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+}
+
+.logo{
+    display: flex;
+    font-size: 20px;
+    font-weight: 800;
+    color:#000411;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+b{
+    font-size: 20px;
+    color:#7f00ff;
+}
+
+.navItems{
+    display: flex;
+}
+
+.navItems li{
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navItems a:hover{
+    box-shadow: #000411;
+    text-decoration:underline;
+}
+
+.navItems a{
+    width: 10px;
+    height: 10px;
+    
+}
+.navItems a span:nth-child{
+    right: 10%;
+    top: -10%;
+    background-color: #000411;
+}
+
+.navItems li a{
+    font-size: 25px;
+    color: #000411;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navItems li:hover {
+    color: #92817A;
+}
+
+.links a{
+    text-decoration: none;
+    font-size: 20px;
+    color:#000411;
+    
+    margin: 25px 10px;
+}
+
+.links a:hover{
+    color: rgb(209, 225, 238);
+text-decoration:underline;
+}
+
+
+.contenido::before{
+    position: absolute;
+    content: '';
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    left: -12%;
+    top: 45%;
+    background: linear-gradient(5deg, #a65bf0, #5972fc);
+    animation: object1 4s linear infinite;
+}
+
+@keyframes object1 {
+    50%{
+        left:40%;
+        top: 21%;
+    }
+}
+
+
+
+/* -------------------------------------------------------------- */
+.contenido{
+    margin: 5rem;
+    position:absolute;
+    width: 90vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  max-width: 300px;
+  margin: 5rem;
+  margin-left: 7.5rem;
+  padding: 20px;
+  z-index: 5;
+   
+    
+} 
+
+
+
+.card {
+  width: 19rem;
+  height: 23em;
+   background: rgb(255,57,247);
+  background: linear-gradient(0deg, rgba(255,57,247,1) 0%, rgba(43,89,252,1) 100%);
+  transition: 1s ease-in-out;
+  clip-path: polygon(30px 0%, 100% 0, 100%  100%, 0 100%, 0% 30px);
+  border-radius: 20px; 
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.card span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 20px;
+}
+
+.card .info {
+  font-weight: 580;
+  color: white;
+  display: block;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: .5em;
+}
+
+.card .img {
+  width: 4.8em;
+  height: 4.8em;
+  background: white;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.card .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.card a {
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+.card a:hover {
+  color: red;
+}
+
+.card button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: .4s ease-in-out;
+}
+
+.card button:hover {
+  background: red;
+  color: white;
+  cursor: pointer;
+}

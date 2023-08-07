@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    
+    background: linear-gradient(90deg, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 43%, rgba(0,0,0,0.77) 100%);
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+}
+
+.logo{
+    display: flex;
+    font-size: 20px;
+    font-weight: 800;
+    color:#000411;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+b{
+    font-size: 20px;
+    color:#7f00ff;
+}
+
+
+.navItems{
+    display: flex;
+}
+
+.navItems li{
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navItems a:hover{
+    box-shadow: #000411;
+    text-decoration:underline;
+}
+
+.navItems a{
+    width: 10px;
+    height: 10px;
+    
+}
+.navItems a span:nth-child{
+    right: 10%;
+    top: -10%;
+    background-color: #000411;
+}
+
+.navItems li a{
+    font-size: 25px;
+    color: #000411;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navItems li:hover {
+    color: #92817A;
+}
+
+.links a{
+    text-decoration: none;
+    font-size: 20px;
+    color:#000411;
+    
+    margin: 25px 10px;
+}
+
+.links a:hover{
+    color: rgb(209, 225, 238);
+text-decoration:underline;
+}
+
+.filtros{
+    width: 95%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.filtros input{
+    background-color: transparent;
+    width: 30%;
+    border: none !important;
+    border-bottom: #000411 solid !important;
+    border-color: 5px #7f00ff;
+    padding: 1em 0.3em;
+}
+
+.filtros input:focus{
+    border-bottom-color: rgb(1, 72, 153);
+}
+
+.filtros button{
+    padding: 1em 2em;
+    margin-left: 1;
+    background-color: #7f00ff;
+    color: white;
+    border-radius: 10px;
+    margin-top: .5em;
+    border-bottom: transparent;
+}
+.filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem;
+}
+
+.filter select{
+    width: 10rem;
+    height: 2rem;
+    font-size: 15px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+
+
+.filter select:hover{
+    background-color: #7f00ff;
+    color: #000000 ;
+}
+
+.filter{
+    overflow: hidden;
+}
+
+.filter::before{
+    position: absolute;
+    content: '';
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    left: -12%;
+    top: 45%;
+    background: linear-gradient(5deg, #a65bf0, #5972fc);
+    animation: object1 6s linear infinite;
+}
+
+@keyframes object1 {
+    50%{
+        left: -13%;
+        top: 41%;
+    }
+}
+
+
+.cartas{
+    margin: 5rem;
+    position:absolute;
+    width: 90vh;
+   
+    
+} 
+
+
+
+
+
+/* ------------------------------------------------------- */
+
+
+
+
+
+.cartas{
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  max-width: 300px;
+  margin: 5rem;
+  margin-left: 7.5rem;
+  padding: 20px;
+
+}
+
+
+.card {
+  width: 350px;
+  height: 250px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+/*   perspective: 1000px;
+ */  box-shadow: 2px 2px 2px 2px #0026ff80;
+  
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgb(255,57,247);
+  background: linear-gradient(0deg, rgba(255,57,247,1) 0%, rgba(43,89,252,1) 100%); 
+  box-shadow: 0 2px 0 2px #0026ff80;
+  border-radius: 1rem;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(-5deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.4;
+}

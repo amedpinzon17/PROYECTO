@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaciones | AutoExchange</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <nav> 
+        <div class="logo">Transacciones<b>.</b></div>
+            <ul class="navItems">
+				<li><a href="../index.html">Inicio</a></li>
+                <li><a href="../autos/autos.html">Autos</a></li>
+                <li><a href="../vendedores/vendedores.html">Vendedores</a></li>
+				<li><a href="../compradores/compradores.html">Compradores</a></li>
+                
+            </ul>
+            <div class="links">
+                 <a href="../login/login.html">salir</a>
+            </div>
+        </nav>
+
+
+    <div class="contenedor">
+
+        <section class="tarjeta" id="tarjeta">
+			<div class="delantera">
+				<div class="logo-marca" id="logo-marca">
+					<!-- <img src="img/logos/visa.png" alt=""> -->
+				</div>
+				<img src="../img/imagen-removebg-preview.png" class="chip" alt="">
+				<div class="datos">
+					<div class="grupo" id="numero">
+						<p class="label">Número Tarjeta</p>
+						<p class="numero">#### #### #### ####</p>
+					</div>
+					<div class="flexbox">
+						<div class="grupo" id="nombre">
+							<p class="label">Nombre Tarjeta</p>
+							<p class="nombre">Amed Pinzon</p>
+						</div>
+
+						<div class="grupo" id="expiracion">
+							<p class="label">Expiracion</p>
+							<p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="trasera">
+				<div class="barra-magnetica"></div>
+				<div class="datos">
+					<div class="grupo" id="firma">
+						<p class="label">Firma</p>
+						<div class="firma"><p></p></div>
+					</div>
+					<div class="grupo" id="ccv">
+						<p class="label">CCV</p>
+						<p class="ccv"></p>
+					</div>
+				</div>
+				<p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus exercitationem, voluptates illo.</p>
+				<a href="#" class="link-banco">www.tubanco.com</a>
+			</div>
+		</section>
+
+
+        <div class="contenedor-btn">
+			<button class="btn-abrir-formulario" id="btn-abrir-formulario">
+				<i class="fas fa-plus"></i>
+			</button>
+		</div>
+
+
+        <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+			<div class="grupo">
+				<label for="inputNumero">Número Tarjeta</label>
+				<input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+			</div>
+			<div class="grupo">
+				<label for="inputNombre">Nombre</label>
+				<input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+			</div>
+			<div class="flexbox">
+				<div class="grupo expira">
+					<label for="selectMes">Expiracion</label>
+					<div class="flexbox">
+						<div class="grupo-select">
+							<select name="mes" id="selectMes">
+								<option disabled selected>Mes</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+						<div class="grupo-select">
+							<select name="year" id="selectYear">
+								<option disabled selected>Año</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+					</div>
+				</div>
+
+				<div class="grupo ccv">
+					<label for="inputCCV">CCV</label>
+					<input type="text" id="inputCCV" maxlength="3">
+				</div>
+			</div>
+			<button type="submit" class="btn-enviar">Enviar</button>
+			<hr>
+             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Historial</button>
+		</form>
+	</div>
+
+
+
+
+<section class="modales">
+
+
+
+
+
+
+
+<!-- Button trigger modal -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">Historial</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+        <table class="table table-info">
+          <thead>
+            <tr>
+                <th>Comprador</th>
+                <th>Vendedor</th>
+                <th>Marca</th>
+				<th>Feche Transaccion</th>
+				<th>Precio Venta</th>
+				<th>Metodo Pago</th>
+				<th>Estado Pago</th>
+            </tr>
+          </thead>
+
+          <tbody class="darte" id="darte">
+			<tr>
+
+			</tr>
+          </tbody>
+          
+        </table>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="transacciones.js" type="module"></script>
+	
+</body>
+</html>
